@@ -1,0 +1,45 @@
+{
+  "name": "helpdesk-mini",
+  "version": "1.0.0",
+  "description": "HelpDesk Mini - MERN Stack Ticketing System with SLA & Comments",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/index.js",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "install-all": "npm install && cd client && npm install",
+    "seed": "node seedDB.js"
+  },
+  "keywords": [
+    "helpdesk",
+    "ticketing",
+    "mern",
+    "sla",
+    "comments"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^6.8.1",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb-memory-server": "^10.2.2",
+    "mongoose": "^7.5.0",
+    "node-cron": "^3.0.2",
+    "socket.io": "^4.7.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
